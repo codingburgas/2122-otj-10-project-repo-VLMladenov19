@@ -33,8 +33,7 @@ documentation and/or software.
 #ifndef BZF_MD5_H
 #define BZF_MD5_H
 
-#include <cstring>
-#include <iostream>
+#include "pch.h"
 
 
 // a small class for calculating MD5 hashes of strings or byte arrays

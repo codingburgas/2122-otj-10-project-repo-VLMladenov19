@@ -31,11 +31,10 @@ documentation and/or software.
 */
 
 /* interface header */
+#include "pch.h"
 #include "md5.h"
 
 /* system implementation headers */
-#include <cstdio>
-
 
 // Constants for MD5Transform routine.
 #define S11 7
@@ -339,7 +338,10 @@ std::string MD5::hexdigest() const
 
     char buf[33];
     for (int i = 0; i < 16; i++)
+    {
+        #pragma warning(suppress : 4996)
         sprintf(buf + i * 2, "%02x", digest[i]);
+    }
     buf[32] = 0;
 
     return std::string(buf);
