@@ -1,6 +1,8 @@
-#include <iostream>
+#include "../pm.bll/pch.h"
+#include "../pm.bll/register-user.h"
 
 int main()
 {
-	std::cout << "Hello, World!\n";
+	User user;
+	user.registerUser();
 }
