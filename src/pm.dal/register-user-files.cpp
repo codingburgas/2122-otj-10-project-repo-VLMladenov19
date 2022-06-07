@@ -3,6 +3,7 @@
 
 User::User(std::string userUsername, std::string userPassword, std::string userFirstName, std::string userLastName, short userAge, Roles userRole)
 {
+	id = 0;
 	incrementId();
 	username = userUsername;
 	password = userPassword;
@@ -35,7 +36,8 @@ void User::incrementId()
 
 	while (getline(file, line))
 	{
-		id = stoi(line);
+		if(line != "")
+			id = stoi(line);
 	}
 
 	id += 1;
