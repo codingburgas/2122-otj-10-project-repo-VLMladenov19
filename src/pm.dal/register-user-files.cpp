@@ -1,17 +1,41 @@
 #include "pch.h"
 #include "register-user-files.h"
 
-void User::addUserToFile(User tempUser)
+User::User(std::string userUsername, std::string userPassword, std::string userFirstName, std::string userLastName, short userAge, Roles userRole)
+{
+	incrementId();
+	username = userUsername;
+	password = userPassword;
+	firstName = userFirstName;
+	lastName = userLastName;
+	age = userAge;
+	role = userRole;
+}
+
+void User::addUserToFile()
 {
 	std::ofstream file("../pm.dal/files/userInfo.txt", std::ios::app);
 
-	file << tempUser.id << ",";
-	file << tempUser.username << ",";
-	file << tempUser.password << ",";
-	file << tempUser.firstName << ",";
-	file << tempUser.lastName << ",";
-	file << tempUser.age << ",";
-	file << int(tempUser.userRole) << "\n";
+	file << id << ",";
+	file << username << ",";
+	file << password << ",";
+	file << firstName << ",";
+	file << lastName << ",";
+	file << age << ",";
+	file << int(role) << "\n";
 
 	file.close();
+}
+
+void User::incrementId()
+{
+	std::ifstream file("../pm.dal/files/userInfo.txt");
+	std::string line;
+
+	while (getline(file, line))
+	{
+		id = stoi(line);
+	}
+
+	id += 1;
 }

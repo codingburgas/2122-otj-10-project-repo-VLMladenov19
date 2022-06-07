@@ -3,6 +3,5 @@
 
 int main()
 {
-	User user;
-	user.registerUser();
+	registerUser();
 }

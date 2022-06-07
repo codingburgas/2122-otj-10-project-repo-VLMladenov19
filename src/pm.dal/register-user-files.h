@@ -16,11 +16,10 @@ private:
 	std::string username, password;
 	std::string firstName, lastName;
 	short int age;
-	Roles userRole;
+	Roles role;
 
 public:
-	void registerUser();
-	int getLastId();
-	int incrementId();
-	void addUserToFile(User);
+	User(std::string, std::string, std::string, std::string, short, Roles);
+	void addUserToFile();
+	void incrementId();
 };
