@@ -163,6 +163,11 @@
     </ClCompile>
     <ClCompile Include="register-user-files.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\pm.tools\pm.tools.vcxproj">
+      <Project>{de3603fc-8147-47f8-94fb-035591dba329}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -3,12 +3,25 @@
 
 void registerUser()
 {
+	std::string username, password;
+	std::string firstName, lastName;
 	short age;
-	std::string username, password, firstName, lastName;
-	std::cin >> username >> password;
-	std::cin >> firstName >> lastName;
+
+	std::cout << "Username: ";
+	std::cin >> username;
+	
+	std::cout << "Password: ";
+	std::cin>> password;
+
+	std::cout << "First Name: ";
+	std::cin >> firstName;
+	std::cout << "Last Name: ";
+	std::cin >> lastName;
+
+	std::cout << "Age: ";
 	std::cin >> age;
-	Roles role = Roles::administrator;
+
+	Roles role = Roles::user;
 
 	User tempUser(username, password, firstName, lastName, age, role);
 
