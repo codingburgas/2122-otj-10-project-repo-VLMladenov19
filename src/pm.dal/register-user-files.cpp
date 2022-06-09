@@ -36,7 +36,7 @@ void User::incrementId()
 
 	while (getline(file, line))
 	{
-		if(line != "")
+		if (line != "")
 			id = stoi(line);
 	}
 
