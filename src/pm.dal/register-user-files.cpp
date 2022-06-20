@@ -42,3 +42,21 @@ void User::incrementId()
 
 	id += 1;
 }
+
+bool User::usernameExists()
+{
+	std::ifstream file("../pm.dal/files/userInfo.txt");
+	std::string line;
+	std::string tempUsername;
+	
+	while (getline(file, line))
+	{
+		line.erase(0, 2);
+		int pos = line.find(',');
+		tempUsername = line.substr(0, pos);
+	}
+
+	if (username == tempUsername)
+		return true;
+	return false;
+}

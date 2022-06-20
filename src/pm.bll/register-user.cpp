@@ -25,5 +25,13 @@ void registerUser()
 
 	User tempUser(username, password, firstName, lastName, age, role);
 
-	tempUser.addUserToFile();
+	if (tempUser.usernameExists())
+	{
+		std::cout << "Username already exists!\n";
+		registerUser();
+	}
+	else
+	{
+		tempUser.addUserToFile();
+	}
 }

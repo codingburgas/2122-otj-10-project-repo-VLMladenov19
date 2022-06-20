@@ -23,4 +23,5 @@ public:
 	User(std::string, std::string, std::string, std::string, short, Roles);
 	void addUserToFile();
 	void incrementId();
+	bool usernameExists();
 };
