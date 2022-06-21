@@ -7,7 +7,6 @@ User::User(std::string userUsername, std::string userPassword, std::string userF
 	incrementId();
 	username = userUsername;
 	password = userPassword;
-	password = md5(password);
 	firstName = userFirstName;
 	lastName = userLastName;
 	age = userAge;
@@ -20,7 +19,7 @@ void User::addUserToFile()
 
 	file << id << ",";
 	file << username << ",";
-	file << password << ",";
+	file << md5(password) << ",";
 	file << firstName << ",";
 	file << lastName << ",";
 	file << age << ",";

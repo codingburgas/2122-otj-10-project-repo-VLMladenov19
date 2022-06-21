@@ -1,6 +1,28 @@
 #include "pch.h"
 #include "register-user.h"
 
+bool User::checkPassword()
+{
+	if (password.length() < 8)
+	{
+		std::cout << password.length() << " ";
+		std::cout << password << " ";
+		std::cout << "Password needs to be at least 8 characters!\n";
+		return false;
+	}
+	if (!stringHasNumbers(password))
+	{
+		std::cout << "Password needs to have numbers in it!\n";
+		return false;
+	}
+	if (!stringHasSymbols(password))
+	{
+		std::cout << "Password needs to have at least one symbols int it(~`!@#$%^&*()_-+={[}]|:;\'<,>.?\/\")!\n";
+		return false;
+	}
+	return true;
+}
+
 void registerUser()
 {
 	std::string username, password;
@@ -25,7 +47,12 @@ void registerUser()
 
 	User tempUser(username, password, firstName, lastName, age, role);
 
-	if (tempUser.usernameExists())
+	if (!tempUser.checkPassword())
+	{
+		registerUser();
+		return;
+	}
+	else if (tempUser.usernameExists())
 	{
 		std::cout << "Username already exists!\n";
 		registerUser();
@@ -34,4 +61,30 @@ void registerUser()
 	{
 		tempUser.addUserToFile();
 	}
+}
+
+bool stringHasNumbers(std::string text)
+{
+	bool flag = false;
+
+	for (int i = 48; i <= 57; i++)
+	{
+		if (text.find(char(i)) != std::string::npos)
+			flag = true;
+	}
+
+	return flag;
+}
+
+bool stringHasSymbols(std::string text)
+{
+	bool flag = false;
+
+	for (int i = 33; i <= 47; i++)
+	{
+		if (text.find(char(i)) != std::string::npos)
+			flag = true;
+	}
+
+	return flag;
 }

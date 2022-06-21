@@ -24,4 +24,5 @@ public:
 	void addUserToFile();
 	void incrementId();
 	bool usernameExists();
+	bool checkPassword();
 };
