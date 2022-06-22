@@ -17,7 +17,7 @@ bool User::checkPassword()
 	}
 	if (!stringHasSymbols(password))
 	{
-		std::cout << "Password needs to have at least one symbols int it(~`!@#$%^&*()_-+={[}]|:;\'<,>.?\/\")!\n";
+		std::cout << "Password needs to have at least one symbols int it(~`!@#$%^&*()_-+={[}]|:;\'<,>.?\\/\")!\n";
 		return false;
 	}
 	return true;
