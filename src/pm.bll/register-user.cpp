@@ -5,8 +5,6 @@ bool User::checkPassword()
 {
 	if (password.length() < 8)
 	{
-		std::cout << password.length() << " ";
-		std::cout << password << " ";
 		std::cout << "Password needs to be at least 8 characters!\n";
 		return false;
 	}

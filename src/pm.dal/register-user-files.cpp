@@ -40,6 +40,8 @@ void User::incrementId()
 	}
 
 	id += 1;
+
+	file.close();
 }
 
 bool User::usernameExists()
@@ -58,4 +60,6 @@ bool User::usernameExists()
 	if (username == tempUsername)
 		return true;
 	return false;
+
+	file.close();
 }

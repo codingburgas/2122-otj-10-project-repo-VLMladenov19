@@ -146,6 +146,9 @@
     <ProjectReference Include="..\pm.bll\pm.bll.vcxproj">
       <Project>{82a89bc8-e9b3-400c-b9f7-666d78c58e6f}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\pm.types\pm.types.vcxproj">
+      <Project>{42ba8ed1-9b51-4163-bf68-daed498f4e01}</Project>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main-menu.h" />

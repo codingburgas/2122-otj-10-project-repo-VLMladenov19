@@ -35,4 +35,6 @@ bool userIsRegistered(std::string username, std::string password)
 	}
 
 	return false;
+
+	file.close();
 }
