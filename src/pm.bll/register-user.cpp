@@ -25,6 +25,8 @@ bool User::checkPassword()
 
 void registerUser()
 {
+	std::cout << "Register user\n\n";
+
 	std::string username, password;
 	std::string firstName, lastName;
 	short age;

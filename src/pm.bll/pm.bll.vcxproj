@@ -151,10 +151,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="login-user.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="register-user.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="login-user.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -166,6 +168,9 @@
   <ItemGroup>
     <ProjectReference Include="..\pm.dal\pm.dal.vcxproj">
       <Project>{ca7036c8-84da-4981-a391-c9264d6da8bf}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\pm.tools\pm.tools.vcxproj">
+      <Project>{de3603fc-8147-47f8-94fb-035591dba329}</Project>
     </ProjectReference>
     <ProjectReference Include="..\pm.types\pm.types.vcxproj">
       <Project>{42ba8ed1-9b51-4163-bf68-daed498f4e01}</Project>
