@@ -153,6 +153,7 @@
   <ItemGroup>
     <ClInclude Include="pch.h" />
     <ClInclude Include="register-user-files.h" />
+    <ClInclude Include="users-management-files.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -162,6 +163,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="register-user-files.cpp" />
+    <ClCompile Include="users-management-files.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\pm.tools\pm.tools.vcxproj">

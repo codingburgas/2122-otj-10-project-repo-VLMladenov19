@@ -10,6 +10,7 @@
 // add headers that you want to pre-compile here
 #include <iostream>
 #include <string>
+#include <vector>
 #include <fstream>
 #include <conio.h>
 
