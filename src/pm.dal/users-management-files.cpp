@@ -13,7 +13,7 @@ std::vector<std::vector<std::string>> getAllUsers()
 	{
 		std::vector<std::string> tempV;
 
-		std::string id = "" + getId(line);
+		std::string id = getId(line);
 		tempV.push_back(id);
 
 		std::string username = getUsername(line);
@@ -39,64 +39,86 @@ std::vector<std::vector<std::string>> getAllUsers()
 	return v;
 }
 
-int getId(std::string line)
+std::string getId(std::string line)
 {
-	return stoi(line);
+	int pos = line.find(',');
+	return line.substr(0, pos);
 }
 
 std::string getUsername(std::string line)
 {
-	line.erase(0, ',');
 	int pos = line.find(',');
+	line.erase(0, pos + 1);
+	pos = line.find(',');
 	return line.substr(0, pos);
 }
 
 std::string getPassword(std::string line)
 {
-	line.erase(0, ',');
-	line.erase(0, ',');
 	int pos = line.find(',');
+	line.erase(0, pos + 1);
+	pos = line.find(',');
+	line.erase(0, pos + 1);
+	pos = line.find(',');
 	return line.substr(0, pos);
 }
 
 std::string getFirstName(std::string line)
 {
-	line.erase(0, ',');
-	line.erase(0, ',');
-	line.erase(0, ',');
 	int pos = line.find(',');
+	line.erase(0, pos + 1);
+	pos = line.find(',');
+	line.erase(0, pos + 1);
+	pos = line.find(',');
+	line.erase(0, pos + 1);
+	pos = line.find(',');
 	return line.substr(0, pos);
 }
 
 std::string getLastName(std::string line)
 {
-	line.erase(0, ',');
-	line.erase(0, ',');
-	line.erase(0, ',');
-	line.erase(0, ',');
 	int pos = line.find(',');
+	line.erase(0, pos + 1);
+	pos = line.find(',');
+	line.erase(0, pos + 1);
+	pos = line.find(',');
+	line.erase(0, pos + 1);
+	pos = line.find(',');
+	line.erase(0, pos + 1);
+	pos = line.find(',');
 	return line.substr(0, pos);
 }
 
-int getAge(std::string line)
+std::string getAge(std::string line)
 {
-	line.erase(0, ',');
-	line.erase(0, ',');
-	line.erase(0, ',');
-	line.erase(0, ',');
-	line.erase(0, ',');
 	int pos = line.find(',');
-	return stoi(line);;
+	line.erase(0, pos + 1);
+	pos = line.find(',');
+	line.erase(0, pos + 1);
+	pos = line.find(',');
+	line.erase(0, pos + 1);
+	pos = line.find(',');
+	line.erase(0, pos + 1);
+	pos = line.find(',');
+	line.erase(0, pos + 1);
+	pos = line.find(',');
+	return line.substr(0, pos);
 }
 
-int getRole(std::string line)
+std::string getRole(std::string line)
 {
-	line.erase(0, ',');
-	line.erase(0, ',');
-	line.erase(0, ',');
-	line.erase(0, ',');
-	line.erase(0, ',');
-	line.erase(0, ',');
+	int pos = line.find(',');
+	line.erase(0, pos + 1);
+	pos = line.find(',');
+	line.erase(0, pos + 1);
+	pos = line.find(',');
+	line.erase(0, pos + 1);
+	pos = line.find(',');
+	line.erase(0, pos + 1);
+	pos = line.find(',');
+	line.erase(0, pos + 1);
+	pos = line.find(',');
+	line.erase(0, pos + 1);
 
-	return stoi(line);
+	return line;
 }

@@ -2,11 +2,6 @@
 
 void printMenu()
 {
-	std::string adminUsername = "admin", adminPass = "adminpass";
-	User admin(adminUsername, adminPass, "", "", 0, Roles::administrator);
-	if (!admin.usernameExists())
-		admin.addUserToFile();
-
 	std::cout << "1. Register user\n";
 	std::cout << "2. Login user\n";
 	std::cout << "3. Users Management\n";

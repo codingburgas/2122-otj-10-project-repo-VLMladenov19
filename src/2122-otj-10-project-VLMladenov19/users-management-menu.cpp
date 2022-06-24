@@ -13,8 +13,10 @@ void printUsersManagement()
 		std::cout << "FirstName: " << v[i][3] << " ";
 		std::cout << "LastName: " << v[i][4] << " ";
 		std::cout << "Age: " << v[i][5] << " ";
-		std::cout << "Role: " << v[i][6] << " ";
+		std::cout << "Role: " << v[i][6] << "\n";
 	}
 
 	std::cin.get();
+	int n;
+	std::cin >> n;
 }
