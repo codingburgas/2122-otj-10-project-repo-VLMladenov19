@@ -12,8 +12,40 @@ void printMenu()
 
 	switch(option)
 	{
-	case 1: system("cls"); registerUser(); system("cls"); printMenu(); break;
-	case 2: system("cls"); loginUser(); system("cls"); printMenu(); break;
-	case 3: system("cls"); printUsersManagement(); system("cls"); printMenu(); break;
+	case 1: 
+		system("cls"); 
+		registerUser(); 
+		system("cls"); 
+		printMenu(); 
+		break;
+
+	case 2: 
+		system("cls"); 
+		loginUser(); 
+		system("cls"); 
+		printMenu(); 
+		break;
+
+	case 3: 
+		system("cls");
+
+		int roleNum = getCurrentUserRole();
+		if (roleNum != 0)
+		{
+			std::cout << "You need administrative rights!\n";
+
+			int wait;
+			std::cin >> wait;
+
+			system("cls");
+			printMenu();
+			break;
+		}
+
+		printUsersManagement();
+		system("cls");
+		printMenu();
+		break;
+
 	}
 }
