@@ -63,3 +63,17 @@ bool User::usernameExists()
 
 	file.close();
 }
+
+bool adminUserExists()
+{
+	std::ifstream file("../pm.dal/files/userInfo.txt");
+	std::string line;
+
+	getline(file, line);
+
+	file.close();
+
+	if (getUsername(line) == "admin")
+		return true;
+	return false;
+}
