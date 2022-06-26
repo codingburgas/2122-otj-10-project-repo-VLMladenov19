@@ -16,25 +16,15 @@ void loginUser()
 	if (userIsRegistered(username, password))
 	{
 		std::cout << "You are in!\n";
+		addCurrentUser(username);
+
+		int wait;
+		std::cin >> wait;
+
 		return;
 	}
 	std::cout << "There is no such user!\n";
-}
 
-bool userIsRegistered(std::string username, std::string password)
-{
-	std::ifstream file("../pm.dal/files/userInfo.txt");
-	std::string line;
-
-	while (getline(file, line))
-	{
-		if (line.find(username) != std::string::npos && line.find(md5(password)) != std::string::npos)
-		{
-			return true;
-		}
-	}
-
-	return false;
-
-	file.close();
+	int wait;
+	std::cin >> wait;
 }
