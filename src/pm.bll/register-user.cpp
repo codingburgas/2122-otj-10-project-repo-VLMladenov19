@@ -50,18 +50,24 @@ void registerUser()
 
 	if (!tempUser.checkPassword())
 	{
+		_getch();
 		registerUser();
 		return;
 	}
 	else if (tempUser.usernameExists())
 	{
 		std::cout << "Username already exists!\n";
+		_getch();
 		registerUser();
+		return;
 	}
 	else
 	{
 		tempUser.addUserToFile();
 	}
+
+	std::cout << "User registered\n";
+	_getch();
 }
 
 bool stringHasNumbers(std::string text)
