@@ -11,3 +11,4 @@ std::string getFirstName(std::string);
 std::string getLastName(std::string);
 std::string getAge(std::string);
 std::string getRole(std::string);
+void addEditedUser(int, std::string, std::string, std::string, std::string, short, int);

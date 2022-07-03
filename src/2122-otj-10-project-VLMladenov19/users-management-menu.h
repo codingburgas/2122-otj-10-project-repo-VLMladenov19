@@ -6,3 +6,4 @@
 #include "../pm.dal/login-user-files.h"
 
 void printUsersManagement();
+void editUserById();

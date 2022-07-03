@@ -122,3 +122,49 @@ std::string getRole(std::string line)
 
 	return line;
 }
+
+void addEditedUser(int id, std::string username, std::string password, std::string fName, std::string lName, short age, int role)
+{
+	std::ifstream users("../pm.dal/files/userInfo.txt");
+	std::string line;
+
+	std::ofstream file("../pm.dal/files/tempFile.txt", std::ios::trunc);
+
+	getline(users, line);
+	file << line << '\n';
+	while (stoi(getId(line)) != id)
+	{
+		getline(users, line);
+		if (stoi(getId(line)) != id)
+		{
+			file << line << '\n';
+		}
+	}
+
+	file << id << ",";
+	file << username << ",";
+	file << md5(password) << ",";
+	file << fName << ",";
+	file << lName << ",";
+	file << age << ",";
+	file << role << "\n";
+
+	while (getline(users, line))
+	{
+		file << line << '\n';
+	}
+
+	users.close();
+	file.close();
+
+	std::ofstream allUsers("../pm.dal/files/userInfo.txt", std::ios::trunc);
+	std::ifstream temporary("../pm.dal/files/tempFile.txt");
+
+	while (getline(temporary, line))
+	{
+		allUsers << line << '\n';
+	}
+
+	allUsers.close();
+	temporary.close();
+}

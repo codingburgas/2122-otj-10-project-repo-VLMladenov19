@@ -20,5 +20,43 @@ void printUsersManagement()
 		std::cout << "Role: " << v[i][6] << "\n";
 	}
 
+	switch (_getch())
+	{
+	case '1':
+		break;
+	case '2':
+		system("cls");
+		editUserById();
+		break;
+	}
+}
+
+void editUserById()
+{
+	int id;
+	std::cout << "Input id of the user you want to edit: ";
+	std::cin >> id;
+
+	std::string username, password;
+	std::string fName, lName;
+	short age;
+	int role;
+
+	std::cout << "Username: ";
+	std::cin >> username;
+	std::cout << "Password: ";
+	std::cin >> password;
+	std::cout << "First Name: ";
+	std::cin >> fName;
+	std::cout << "Last Name: ";
+	std::cin >> lName;
+	std::cout << "Age: ";
+	std::cin >> age;
+	std::cout << "Role(0-admin, 1-user): ";
+	std::cin >> role;
+
+	addEditedUser(id, username, password, fName, lName, age, role);
+
+	std::cout << "User edited!\n";
 	_getch();
 }
