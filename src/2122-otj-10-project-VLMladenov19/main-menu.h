@@ -6,3 +6,4 @@
 #include "users-management-menu.h"
 
 void printMenu();
+void printOptions(int);

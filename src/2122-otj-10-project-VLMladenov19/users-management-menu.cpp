@@ -3,6 +3,8 @@
 
 void printUsersManagement()
 {
+	system("cls");
+
 	std::vector<std::vector<std::string>> v = getAllUsers();
 
 	for (size_t i = 0; i < v.size(); i++)

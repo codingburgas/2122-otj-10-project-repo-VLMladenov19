@@ -23,6 +23,7 @@ bool User::checkPassword()
 
 void registerUser()
 {
+	system("cls");
 	std::cout << "Register user\n\n";
 
 	std::string username, password;

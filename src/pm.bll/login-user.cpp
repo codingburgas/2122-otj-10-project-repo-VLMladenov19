@@ -3,6 +3,7 @@
 
 void loginUser()
 {
+	system("cls");
 	std::cout << "Login user\n\n";
 
 	std::string username, password;
@@ -25,6 +26,5 @@ void loginUser()
 	}
 	std::cout << "There is no such user!\n";
 
-	int wait;
-	std::cin >> wait;
+	_getch();
 }
