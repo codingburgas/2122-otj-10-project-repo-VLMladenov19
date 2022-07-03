@@ -48,5 +48,16 @@ int getCurrentUserRole()
 			return stoi(getRole(line));
 		}
 	}
-	return 0;
+	return -1;
+}
+
+bool userLoggedIn()
+{
+	std::ifstream file("../pm.dal/files/currentUser.txt");
+	std::string line;
+	getline(file, line);
+
+	if (line != "")
+		return true;
+	return false;
 }

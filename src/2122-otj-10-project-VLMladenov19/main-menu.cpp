@@ -38,6 +38,16 @@ void printMenu()
 		break;
 
 	case 1: 
+		system("cls");
+		if (userLoggedIn())
+		{
+			std::cout << "You are already logged in!\n";
+			_getch();
+
+			system("cls");
+			printMenu();
+			return;
+		}
 		loginUser();
 		system("cls");
 		printMenu();
@@ -55,7 +65,6 @@ void printMenu()
 			printMenu();
 			return;
 		}
-
 		printUsersManagement();
 		system("cls");
 		printMenu();

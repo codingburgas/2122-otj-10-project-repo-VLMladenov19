@@ -19,8 +19,7 @@ void loginUser()
 		std::cout << "You are in!\n";
 		addCurrentUser(username);
 
-		int wait;
-		std::cin >> wait;
+		_getch();
 
 		return;
 	}

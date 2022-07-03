@@ -5,6 +5,8 @@ void printUsersManagement()
 {
 	system("cls");
 
+	std::cout << "1. Delete user by ID   2. Edit user's information   3. Exit\n\n\n";
+
 	std::vector<std::vector<std::string>> v = getAllUsers();
 
 	for (size_t i = 0; i < v.size(); i++)
@@ -18,7 +20,5 @@ void printUsersManagement()
 		std::cout << "Role: " << v[i][6] << "\n";
 	}
 
-	std::cin.get();
-	int n;
-	std::cin >> n;
+	_getch();
 }

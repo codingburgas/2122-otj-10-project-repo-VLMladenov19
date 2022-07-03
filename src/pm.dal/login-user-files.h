@@ -6,3 +6,4 @@
 bool userIsRegistered(std::string, std::string);
 void addCurrentUser(std::string);
 int getCurrentUserRole();
+bool userLoggedIn();
