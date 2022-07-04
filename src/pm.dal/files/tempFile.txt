@@ -1,4 +1,2 @@
 1,admin,25e4ee4e9229397b6b17776bfceaf8e7,admin,admin,0,0
-2,Vasdkp,196b0f14eba66e10fba74dbf9e99c22f,asda,sdas,123,0
-3,Vasko,196b0f14eba66e10fba74dbf9e99c22f,dasd,sda,1,0
-4,dawdsad,2e063e6b45272316a55545d577c255a2,dasd,dasda,13,1
+2, Wasko,0e2ccb105d0ba4fdde060190b4305919,Vasil,Mladenov,16,1

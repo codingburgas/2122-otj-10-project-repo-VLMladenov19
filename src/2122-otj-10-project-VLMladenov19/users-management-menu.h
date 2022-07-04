@@ -7,3 +7,4 @@
 
 void printUsersManagement();
 void editUserById();
+void deleteUserById();

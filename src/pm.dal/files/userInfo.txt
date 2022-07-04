@@ -1,0 +1,2 @@
+1,admin,25e4ee4e9229397b6b17776bfceaf8e7,admin,admin,0,0
+2, Wasko,0e2ccb105d0ba4fdde060190b4305919,Vasil,Mladenov,16,1

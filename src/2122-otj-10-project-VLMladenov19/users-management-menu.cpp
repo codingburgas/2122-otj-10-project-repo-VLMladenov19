@@ -23,6 +23,8 @@ void printUsersManagement()
 	switch (_getch())
 	{
 	case '1':
+		system("cls");
+		deleteUserById();
 		break;
 	case '2':
 		system("cls");
@@ -34,7 +36,7 @@ void printUsersManagement()
 void editUserById()
 {
 	int id;
-	std::cout << "Input id of the user you want to edit: ";
+	std::cout << "Input the id of the user you want to edit: ";
 	std::cin >> id;
 
 	std::string username, password;
@@ -58,5 +60,17 @@ void editUserById()
 	addEditedUser(id, username, password, fName, lName, age, role);
 
 	std::cout << "User edited!\n";
+	_getch();
+}
+
+void deleteUserById()
+{
+	int id;
+	std::cout << "Insert the id of the user you want to edit: ";
+	std::cin >> id;
+
+	deleteUser(id);
+
+	std::cout << "User deleted!\n";
 	_getch();
 }
