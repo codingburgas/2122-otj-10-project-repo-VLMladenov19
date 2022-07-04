@@ -5,17 +5,17 @@ bool User::checkPassword()
 {
 	if (password.length() < 8)
 	{
-		std::cout << "Password needs to be at least 8 characters!\n";
+		std::cout << "\nPassword needs to be at least 8 characters!\n";
 		return false;
 	}
 	if (!stringHasNumbers(password))
 	{
-		std::cout << "Password needs to have numbers in it!\n";
+		std::cout << "\nPassword needs to have numbers in it!\n";
 		return false;
 	}
 	if (!stringHasSymbols(password))
 	{
-		std::cout << "Password needs to have at least one symbols int it(~`!@#$%^&*()_-+={[}]|:;\'<,>.?\\/\")!\n";
+		std::cout << "\nPassword needs to have at least one symbols int it(~`!@#$%^&*()_-+={[}]|:;\'<,>.?\\/\")!\n";
 		return false;
 	}
 	return true;
@@ -56,7 +56,7 @@ void registerUser()
 	}
 	else if (tempUser.usernameExists())
 	{
-		std::cout << "Username already exists!\n";
+		std::cout << "\nUsername already exists!\n";
 		_getch();
 		registerUser();
 		return;
@@ -66,7 +66,7 @@ void registerUser()
 		tempUser.addUserToFile();
 	}
 
-	std::cout << "User registered\n";
+	std::cout << "\nUser registered\n";
 	_getch();
 }
 

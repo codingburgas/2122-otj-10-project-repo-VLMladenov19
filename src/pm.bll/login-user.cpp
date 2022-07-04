@@ -16,14 +16,14 @@ void loginUser()
 
 	if (userIsRegistered(username, password))
 	{
-		std::cout << "You are in!\n";
+		std::cout << "\nYou are in!\n";
 		addCurrentUser(username);
 
 		_getch();
 
 		return;
 	}
-	std::cout << "There is no such user!\n";
+	std::cout << "\nThere is no such user!\n";
 
 	_getch();
 }

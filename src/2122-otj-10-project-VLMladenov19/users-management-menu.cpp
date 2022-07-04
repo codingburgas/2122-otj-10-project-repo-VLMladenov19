@@ -5,7 +5,7 @@ void printUsersManagement()
 {
 	system("cls");
 
-	std::cout << "1. Delete user by ID   2. Edit user's information   3. Exit\n\n\n";
+	std::cout << "1. Delete user by ID   2. Edit user's information   3. Create user   4. Exit\n\n\n";
 
 	std::vector<std::vector<std::string>> v = getAllUsers();
 
@@ -29,6 +29,10 @@ void printUsersManagement()
 	case '2':
 		system("cls");
 		editUserById();
+		break;
+	case '3':
+		system("cls");
+		createUser();
 		break;
 	}
 }
@@ -59,7 +63,7 @@ void editUserById()
 
 	addEditedUser(id, username, password, fName, lName, age, role);
 
-	std::cout << "User edited!\n";
+	std::cout << "\nUser edited!\n";
 	_getch();
 }
 
@@ -71,6 +75,55 @@ void deleteUserById()
 
 	deleteUser(id);
 
-	std::cout << "User deleted!\n";
+	std::cout << "\nUser deleted!\n";
+	_getch();
+}
+
+void createUser()
+{
+	system("cls");
+	std::cout << "Create user\n\n";
+
+	std::string username, password;
+	std::string firstName, lastName;
+	short age;
+
+	std::cout << "Username: ";
+	std::cin >> username;
+
+	std::cout << "Password: ";
+	std::cin >> password;
+
+	std::cout << "First Name: ";
+	std::cin >> firstName;
+	std::cout << "Last Name: ";
+	std::cin >> lastName;
+
+	std::cout << "Age: ";
+	std::cin >> age;
+
+	Roles role = Roles::user;
+
+	User tempUser(username, password, firstName, lastName, age, role);
+
+	if (!tempUser.checkPassword())
+	{
+		_getch();
+		registerUser();
+		return;
+	}
+	else if (tempUser.usernameExists())
+	{
+		std::cout << "\nUsername already exists!\n";
+		_getch();
+		registerUser();
+		return;
+	}
+	else
+	{
+		tempUser.addUserToFile();
+	}
+
+	std::cout << "\nUser registered\n";
 	_getch();
 }

@@ -2,8 +2,6 @@
 
 #define KEY_UP 72
 #define KEY_DOWN 80
-#define KEY_LEFT 75
-#define KEY_RIGHT 77
 
 void printMenu()
 {
@@ -14,7 +12,6 @@ void printMenu()
 
 	while (_getch() != ' ')
 	{
-		system("cls");
 		switch ((arrow = _getch())) {
 		case KEY_UP:
 			if(option > 0)
@@ -74,6 +71,7 @@ void printMenu()
 
 void printOptions(int arrow)
 {
+	system("cls");
 	switch (arrow)
 	{
 	case 0:
