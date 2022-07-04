@@ -186,7 +186,7 @@ void deleteUser(int id)
 
 	while (getline(users, line))
 	{
-		file << stoi(getId(line)) - 1 << ", ";
+		file << stoi(getId(line)) - 1 << ",";
 		file << getUsername(line) << ",";
 		file << md5(getPassword(line)) << ",";
 		file << getFirstName(line) << ",";
