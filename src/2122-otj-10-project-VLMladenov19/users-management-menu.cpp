@@ -25,14 +25,17 @@ void printUsersManagement()
 	case '1':
 		system("cls");
 		deleteUserById();
+		printUsersManagement();
 		break;
 	case '2':
 		system("cls");
 		editUserById();
+		printUsersManagement();
 		break;
 	case '3':
 		system("cls");
 		createUser();
+		printUsersManagement();
 		break;
 	}
 }

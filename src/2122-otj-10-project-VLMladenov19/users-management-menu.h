@@ -8,3 +8,4 @@
 void printUsersManagement();
 void editUserById();
 void deleteUserById();
+void createUser();

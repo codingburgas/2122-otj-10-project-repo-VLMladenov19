@@ -154,7 +154,6 @@
     <ClInclude Include="login-user-files.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="register-user-files.h" />
-    <ClInclude Include="user-role-files.h" />
     <ClInclude Include="users-management-files.h" />
   </ItemGroup>
   <ItemGroup>
@@ -166,7 +165,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="register-user-files.cpp" />
-    <ClCompile Include="user-role-files.cpp" />
     <ClCompile Include="users-management-files.cpp" />
   </ItemGroup>
   <ItemGroup>

@@ -24,9 +24,6 @@
     <ClInclude Include="users-management-files.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="user-role-files.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="login-user-files.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -39,9 +36,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="users-management-files.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="user-role-files.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="login-user-files.cpp">
